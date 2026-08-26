@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All products - RedStore </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- BootstrapCDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px" alt=""></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="./index.html">خانه</a></li>
+                        <li><a href="./products.html">محصولات</a></li>
+                        <li><a href="about us.html">درباره ما</a></li>
+                        <li><a href="./account.html">درباره ما</a></li>
+                    </ul>
+                </nav>
+               <a href="./cart.html"><img src="images/cart.png" width="30px" height="30px" alt=""></a>
+               
+                <img src="images/menu.png" class="menu-icon" alt="" onclick="menutoggle()">
+            </div>
+            </div> 
+
+
+             <!-- Account-page -->
+
+             <div class="account-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="./images/image1.png" width="100%">
+                        </div>
+                         <div class="col-2">
+                            <div class="form-container">
+                           <div class="form-btn">   
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()" >Register</span>
+                                <hr id="Indicator">
+                           </div>
+
+                            <form id="LoginForm">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Login</button>
+                                <a href="">Forgot Password</a>
+                            </form>
+
+                            <form id="RegForm">
+                                <input type="text" placeholder="Username">
+                                <input type="email" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="btn">Register</button>
+                                 
+                            </form>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            <!-- footer -->
+
+<div class="footer">
+     <div class="container">
+        <div class="row">
+             <div class="footer-col-1">
+                <h3>دانلود اپلیکیشن ما</h3>
+                <p> اپلیکیشن ما را برای دستگاه های اندروید و ios  دانلود کنید.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="">
+                    <img src="images/app-store.png" alt="">
+                </div>
+             </div>
+             <div class="footer-col-2">
+                 <img src="images/logo-white.png" alt="">
+                <p> هدف ما این است که لذت و مزیای ورزش را به روشی پایدار برای عموم  <br> قابل دسترسی کنیم</p>
+             </div>
+              
+             <div class="footer-col-3">
+                <h3> لینک های مفید </h3>
+                 <ul>
+                    <li>کوپن های تخفیف</li>
+                    <li>وبلاگ</li>
+                    <li>سیاست بازگشت</li>
+                    <li>همکاری در فروش</li>
+                 </ul>
+             </div>
+
+             <div class="footer-col-4">
+                  <h3>ما را دنبال کنید</h3>
+                 <ul>
+                    <li>فیسبوک</li>
+                    <li>توییتر</li>
+                    <li>اینساگرام</li>
+                    <li>یوتوب</li>
+                 </ul>
+             </div>
+             
+        </div>
+        <hr>
+           <p class="copyright">کلیه حقوق محفوظ است-Kimia Rakei</p>
+    </div>
+</div>
+
+<!-- js for taggle menu -->
+
+<script>
+    var menuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight ="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight =="0px")
+    {
+        MenuItems.style.maxHeight = "200px"
+    }
+     else
+     {
+       MenuItems.style.maxHeight =="0px"
+     }
+    }
+</script>
+
+<!-- js for product gallery -->
+
+<Script>
+    var producImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementsByClassName("small-img")
+
+    SmallImg[0].onclick = function()
+    {
+        ProductImg.src = SmallImg[0].src;
+    }
+     SmallImg[1].onclick = function()
+    {
+        ProductImg.src = SmallImg[1].src;
+    }
+     SmallImg[2].onclick = function()
+    {
+        ProductImg.src = SmallImg[2].src;
+    }
+     SmallImg[3].onclick = function()
+    {
+        ProductImg.src = SmallImg[3].src;
+    }
+
+</Script>
+
+  <!-- js for toggle form  -->
+   <script>
+
+
+     var LoginForm = document.getElementById("LoginForm")
+     var RegForm = document.getElementById("RegForm")
+     var Indicator = document.getElementById("Indicator")
+
+    function register(){
+        RegForm.style.transform ="translateX(0px)";
+        LoginForm.style.transform ="translateX(0px)";
+        Indicator.style.transform ="translateX(100px)";
+
+    }
+
+    function login(){
+        RegForm.style.transform ="translateX(300px)";
+        LoginForm.style.transform ="translateX(300px)";
+        Indicator.style.transform ="translateX(0px)";
+
+    }
+
+   </script>
+ 
+</body>
+</html>
